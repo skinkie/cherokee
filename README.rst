@@ -18,7 +18,7 @@ To build from the repository, you will require ``autoconf``, ``automake``, and
 ``libtool`` tools to be available, typically available on your distribution
 either by default or by running the following on Debian-based systems::
 
-    sudo apt-get install autoconf automake libtool
+    sudo apt-get install autoconf automake libtool-bin python2 libssl-dev
 
 or, for Yum-based systems, such as RedHat, CentOS or Fedora::
 
@@ -36,7 +36,7 @@ Once cloned, ``cd`` into the resulting source directory and run
 ``./autogen.sh`` to set up the environment and generate ``./configure``::
 
     cd webserver
-    ./autogen.sh [options]
+    ./autogen.sh --with-python2=/usr/bin/python2 [options]
     make
     make install
 
